@@ -1,0 +1,57 @@
+html,body{
+    height:100%;
+    background: white;
+}
+
+.main_in_signup{
+    background: white;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.heading-in-signup{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color:black;
+}
+
+.username-already-there{
+    background: lightgreen;
+}
+.signup_form{
+    display: flex;
+    flex: 1;
+    color: black
+}
+
+.form_class{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+}
+
+.label_input{
+    margin: 20px;
+}
+
+.form-control{
+    margin-top:5px;
+    width:100%;
+    height:30px;
+}
+
+.signup_button{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary{
+    margin:30px;
+    width:200px;
+}
+

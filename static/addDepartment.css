@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+html,body{
+    height:100%;
+    background: white;
+}
+
+.container{
+    max-width: 100%;
+    max-height: 100%;
+    background: white;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.heading_in_addDept{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.error_success_info{
+    background: lightgreen;
+}
+.form_in_addDept{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 20px;
+    /* justify-content: center; */
+}
+
+.form-label{
+    color:black;
+}
+
+.form-control{
+    width: 100%;
+    height: 30px;
+}
+
+.add_dept_button{
+    margin-top: 20px;
+}

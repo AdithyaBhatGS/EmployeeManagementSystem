@@ -1,0 +1,1 @@
+CREATE TABLE password_data(empId INTEGER,password TEXT,FOREIGN KEY(empId) REFERENCES employee(empId));

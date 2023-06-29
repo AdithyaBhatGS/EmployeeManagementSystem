@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='department.css') }}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main_department">
+        
+        <div class="heading_department">
+            <h1>Department</h1>
+            <p>User:{{ current_user }}</p>
+        </div>
+        <hr style="color: brown;">
+        <div class="btn-group">
+            <a href="/viewDepartment" class="btn btn-primary">View Department</a>
+            <a href="/add_dept" class="btn btn-primary">Add Department</a>
+        </div>  
+
+        <div class="department_table">
+            <div class="table-responsive-lg caption-top" style="color: white;margin: 5px;">
+                <caption><h3>List of all Departments</h3></caption>
+                <table class="table" style="color:rgb(223, 232, 232);">
+                    <thead>
+                        <tr>
+                          <th scope="col">Department ID</th>
+                          <th scope="col">Department Name</th>
+                          <th scope="col">Update</th>
+                          <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dept in dept_data %}
+                        <tr>
+                          <th scope="row">{{ dept['DEPT_ID'] }}</th>
+                          <td>{{ dept['DEPT_NAME'] }}</td>
+                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('updateDept1',DEPT_ID=dept['DEPT_ID']) }}">Update</a></td>
+                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('deleteDept',DEPT_ID=dept['DEPT_ID']) }}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

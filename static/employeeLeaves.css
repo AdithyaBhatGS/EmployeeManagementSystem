@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+.container{
+    margin:10px;
+}
+
+.heading_dashboard{
+    display: flex;
+    justify-content: space-between;
+}

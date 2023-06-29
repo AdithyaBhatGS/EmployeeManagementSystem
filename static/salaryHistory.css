@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading-salaryHistory{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.salaryHistoryTable{
+    margin: 15px;
+}

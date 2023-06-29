@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+.main-viewFullProfile{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.list_in_Profile{
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-value{
+    display: flex;
+    align-items: center;
+}
+
+.button_in_Profile{
+    height:20px;
+    font-size: 15px;
+}

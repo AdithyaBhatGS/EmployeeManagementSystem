@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Full Profile Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/viewFullProfile.css" type="text/css">
+</head>
+<body>
+    <div class="main-viewFullProfile">
+        <h1>View Full Profile</h1>
+        <p>User:{{ current_user }}</p>
+    </div>
+    <hr style="color: brown;">
+    <ul class="list-group">
+        {% if data %}
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Employee Name: {{ data['EMP_NAME'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Gender: {{ data['GENDER'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Date of Birth: {{ data['DOB'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Email: {{ data['EMAIL'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Phone: {{ data['PHONE'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Department: {{ data[''] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Designation: {{ data['DESIGNATION'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        Address: {{ data['EMP_ADDRESS'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+            <li class="list-group-item" style="border: 4pt solid blueviolet; border-radius: 10px;margin: 20px;">
+                <div class="list_in_Profile">
+                    <div class="label-value">
+                        CTC: {{ data['CTC'] }}
+                    </div>
+                    <button type="button" class="btn btn-secondary">
+                        <div class="button_in_Profile">
+                            Update
+                        </div>
+                    </button>
+                </div>
+            </li>
+        {% endif %}
+      </ul>
+</body>
+</html>

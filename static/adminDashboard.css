@@ -1,0 +1,30 @@
+html,body{
+    height:100%;
+    background: white;
+}
+
+.main_in_dashboard{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.heading_dashboard{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.cardInDashboard{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.card{
+    width: 26%;
+    margin: 10px;
+}

@@ -1,0 +1,44 @@
+/* align-items->when we create a flex box if we want to position elements vertically
+justify-content->when we  create a flex box if we want to position elements horizontally
+
+main->flex
+
+flex_of_main(heading,button_index)
+
+button_index->flex
+
+flex_of_button_index(Signup,Login,About Us)
+
+*/
+html,body{
+    height:100%;
+    background: white;
+}
+
+.main{
+    background: white;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding: 30px;
+}
+
+.button_in_index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1
+}
+
+.btn-primary{
+    margin:30px;
+    width:200px;
+}
+

@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading_in_addSalary{
+    margin:5px;
+    display: flex;
+    justify-content: space-between;
+}
