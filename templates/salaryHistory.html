@@ -6,32 +6,40 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-<body>
+<body style="margin: 20px;">
     <div class="heading-salaryHistory">
         <h1>Salary History</h1>
         <p>User:{{ current_user }}</p>
     </div>
     <hr style="color: brown;">
+    <div class="empDetails">
+        <p>EmpId:{{ empId }}</p>
+        <p>EmpName:{{ empName }}</p>
+    </div>
     <div class="salaryHistoryTable">
         <div class="table-responsive-lg caption-top" style="color: white;margin: 5px;">
             <table class="table" style="color:rgb(223, 232, 232);">
                 <thead>
                     <tr>
-                      <th scope="col">Issued on</th>
-                      <th scope="col">Salary Credited</th>
-                      <th scope="col">Basic</th>
-                      <th scope="col">HRA</th>
-                      <th scope="col">Other Allowances</th>
+                        <th scope="col">Salary Id</th>
+                        <th scope="col">Issued On</th>
+                        <th scope="col">Salary Credited</th>
+                        <th scope="col">Basic</th>
+                        <th scope="col">Hra</th>
+                        <th scope="col">Other Allowances</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>23/06/2012</td>
-                        <td>20000</td>                         
-                        <td>17000</td>
-                        <td>1300</td>
-                        <td>1700</td>
-                    </tr>
+                    {% for data in empSalaryData %}
+                        <tr>
+                            <td>{{ data[0] }}</td>
+                            <td>{{ data[1] }}</td>   
+                            <td>{{ data[2]+data[3]+data[4] }}</td>                      
+                            <td>{{ data[2] }}</td>
+                            <td>{{ data[3] }}</td>
+                            <td>{{ data[4] }}</td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

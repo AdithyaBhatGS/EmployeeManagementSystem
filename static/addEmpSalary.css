@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+.container{
+    margin: 10px;
+}
+
+.empIndividualSalaryMain{
+    display: flex;
+    flex-direction: column;
+}
+
+.error-in-addSalary{
+    color: red;
+    background: lightgreen;
+}
+
+.formData{
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-3{
+    margin: 10px;
+}
+
+.form-label{
+    color:black;
+}
+
+.form-control{
+    width: 100%;
+    height: 30px;
+}
+
+.add_dept_button{
+    margin-top: 20px;
+}

@@ -15,26 +15,36 @@
             <p>User:{{ current_user }}</p>
             <div class="error_success_info">
                 <div class="dept_error_info" style="color: red;">
-                    {% if dept_error %}
-                        {{ dept_error }}
-                    {% endif %}
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}    
+                            {% for data in messages %}
+                                {{ data }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
                 <div class="dept_message_info" style="color: blue;">
-                    {% if dept_message %} 
-                        {{ dept_message }}
-                    {% endif %}
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}    
+                            {% for data in messages %}
+                                {{ data }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </div>
         <hr style="color: brown;">
         <div class="form_in_addDept">
-            <form action="/add_dept" method="post" style="margin: 10px;">
+            <form action="{{ url_for('add_dept') }}" method="post" style="margin: 10px;">
                 <div class="m-5">
                     <label for="deptname" class="form-label">Department Name</label>
                     <input type="text" id="deptname" name="deptname" placeholder="Enter the name of the department" class="form-control" required>
                 </div>
                 <div class="m-5 add_dept_button">
                     <button type="submit" class="btn btn-primary">Add Department</button>
+                    <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+                    <a href="{{ url_for('department') }}" class="btn btn-primary">Department</a>
                 </div>
             </form>
         </div>

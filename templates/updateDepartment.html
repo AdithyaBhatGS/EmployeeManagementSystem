@@ -28,7 +28,7 @@
         </div>
         <hr style="color: brown;">
         <div class="form_in_addDept">
-            <form action="/updateDept2" method="post" style="margin: 10px;">
+            <form action="{{ url_for('updateDept',deptId=deptId) }}" method="post" style="margin: 10px;">
                 <div class="m-5">
                     <label for="deptname" class="form-label">Department Name</label>
                     <input type="text" id="deptname" name="updated_deptname" placeholder="Enter the name of the department" class="form-control" required>

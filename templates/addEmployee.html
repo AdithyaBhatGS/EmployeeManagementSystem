@@ -32,7 +32,7 @@
         
         <div class="form_in_addDept">
             
-            <form action="/add_employee" method="post" style="margin: 10px;">
+            <form action="{{ url_for('add_employee') }}" method="post" style="margin: 10px;">
                 <div class="mb-3">
                     <label for="empname" class="form-label">Employee Name</label>
                     <input type="text" id="empname" name="empname" placeholder="Enter name" class="form-control" required>
@@ -40,7 +40,7 @@
                 <div class="mb-3">
                     <label for="gender" class="form-label">Gender</label>
                     <p></p>
-                    <select name="gender" id="gender" class="extend_width" required>
+                    <select name="gender" id="gender" class="extend_width">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="others" selected>Others</option>
@@ -59,7 +59,7 @@
             
                 <div class="mb-3">
                     <label for="phone" class="form-label">Phone</label>
-                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter the phone" required>
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter the phone">
                 </div>
                 
                 
@@ -68,9 +68,10 @@
                     <p></p>
                 
                     <select name="department" id="department" class="extend_width">
+                        
                         {% if dept_data %}
                             {% for dept in dept_data %}
-                                <option value="{{ dept['DEPT_NAME'] }}">{{ dept['DEPT_NAME'] }}</option>
+                                <option value="{{ dept['deptName'] }}">{{ dept['deptName'] }}</option>
                             {% endfor %}
                         {% endif %}
                     </select>
@@ -88,11 +89,12 @@
                     
                 <div class="mb-3">
                     <label for="ctc" class="form-label">CTC</label>
-                    <input type="number" class="form-control" id="ctc" name="ctc" min="1000" step="1000" placeholder="Enter the CTC" required>
+                    <input type="number" class="form-control" id="ctc" name="ctc" min="1000" step="1000" placeholder="Enter the CTC">
                 </div>
                 
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Add Employee</button>
+                    <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a></div>
                 </div>
             
             </form>

@@ -28,3 +28,8 @@ html,body{
     width: 26%;
     margin: 10px;
 }
+
+.logoutButton{
+    display: flex;
+    justify-content: center;
+}

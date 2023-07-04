@@ -18,3 +18,7 @@ html,body{
     color: black;
 }
 
+.logoutButton{
+    display: flex;
+    justify-content: center;
+}

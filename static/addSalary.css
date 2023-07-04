@@ -6,5 +6,16 @@
 .heading_in_addSalary{
     margin:5px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.flashForSalary{
+    color: blue;
+    background: lightgreen;
+}
+
+.logoutButton{
+    display: flex;
+    justify-content: center;
 }

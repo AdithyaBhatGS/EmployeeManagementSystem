@@ -35,15 +35,18 @@
                     <tbody>
                         {% for dept in dept_data %}
                         <tr>
-                          <th scope="row">{{ dept['DEPT_ID'] }}</th>
-                          <td>{{ dept['DEPT_NAME'] }}</td>
-                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('updateDept1',DEPT_ID=dept['DEPT_ID']) }}">Update</a></td>
-                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('deleteDept',DEPT_ID=dept['DEPT_ID']) }}">Delete</a></td>
+                          <th scope="row">{{ dept['deptId'] }}</th>
+                          <td>{{ dept['deptName'] }}</td>
+                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('updateDept',deptId=dept['deptId']) }}">Update</a></td>
+                          <td><a class="btn btn-sm" style="background-color:rgb(0, 75, 93); color:whitesmoke;" href="{{ url_for('deleteDept',deptId=dept['deptId']) }}">Delete</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
+        </div>
+        <div class="logoutButton">
+            <a href="{{ url_for('logout') }}" class="btn btn-primary" font-size: 15px;">Logout</a></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
